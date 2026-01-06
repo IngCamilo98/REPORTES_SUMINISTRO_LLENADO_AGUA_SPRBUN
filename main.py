@@ -30,7 +30,7 @@ fechas_mes = menu.rango_fechas_25a25()
 
 #---------------------------creemos los dataframes---------------------------#
 
-ruta_excel = '/home/sr_camilot/Documents/AMC/TEC/REPORTES_MANTENIMIENTO_SPRBUN/BD/EXCEL/ACTIVIDADES/BD_ACTIVIDADES_HIDROSANITARIAS_CUBIERTAS.xlsx'
+ruta_excel = '/home/sr_camilot/Documents/AMC/TEC/REPORTES_SUMINISTRO_LLENADO_AGUA_SPRBUN/BD/EXCEL/ACTIVIDADES/BD_ACTIVIDADES_HIDROSANITARIAS_CUBIERTAS.xlsx'
 
 create_dataframe = DATAFRAMES_ACTIVIDADES_SPRBUN(ruta_excel)
 

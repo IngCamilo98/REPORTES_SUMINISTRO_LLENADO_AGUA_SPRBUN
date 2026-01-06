@@ -77,7 +77,7 @@ class CREATE_EXCEL_RESUME:
         mes_nombre = self.MESES_ES.get(mes_num, str(mes_num))
 
         # Nombre del archivo
-        nombre_archivo = f"INFORME_MANTENIMIENTO_SPRBUN_{mes_nombre}_{anio}.xlsx"
+        nombre_archivo = f"INFORME_SUMISTRO_LLENADO_AGUA_{mes_nombre}_{anio}.xlsx"
         ruta_archivo = os.path.join(self.output_dir, nombre_archivo)
 
         # Crear libro
