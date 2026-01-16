@@ -36,8 +36,7 @@ create_dataframe = DATAFRAMES_ACTIVIDADES_SPRBUN(ruta_excel)
 
 df_informe_actividades = create_dataframe.get_dataframe_actividades()
 
-#---------------------------generemos los resúmenes diarios---------------------------#
-
+#---------------------------creemos los resúmenes diarios---------------------------#
 df_resumenes = pd.read_excel("BD/EXCEL/RESUMENES/resumenes_mensuales.xlsx")
 #---------------------------generemos el resumen mensual---------------------------#
 resumen_general = GENERATE_GENERAL_RESUME(df_informe_actividades)
