@@ -113,10 +113,14 @@ class DATAFRAMES_ACTIVIDADES_SPRBUN:
         """
         Limpia directamente self.df_actividades sin crear copias.
         Modifica el DataFrame original dentro de la clase.
+        Además, filtra solo las filas con ID_ITEM == 3.1
         """
-    
+
+        # -----------------------------
+        # 1. Limpiar DESCRIPCION
+        # -----------------------------
         columnas_a_liminar = ["DESCRIPCION"]
-    
+
         for col in columnas_a_liminar:
             if col in self.df_actividades.columns:
                 self.df_actividades[col] = (
@@ -124,6 +128,26 @@ class DATAFRAMES_ACTIVIDADES_SPRBUN:
                     .astype(str)
                     .apply(self.limpiar_texto_pdf)
                 )
-    
+
+        # -----------------------------
+        # 2. Filtrar por ID_ITEM = 3.1
+        # -----------------------------
+        if "ID_ITEM" in self.df_actividades.columns:
+            # Asegurar que sea numérico
+            self.df_actividades["ID_ITEM"] = pd.to_numeric(
+                self.df_actividades["ID_ITEM"], errors="coerce"
+            )
+
+            # Filtrar solo 3.1
+            self.df_actividades = (
+                self.df_actividades[self.df_actividades["ID_ITEM"].round(2) == 3.10]
+                .reset_index(drop=True)
+            )
+        else:
+            raise KeyError(
+                f"No existe la columna 'ID_ITEM' en el DataFrame. "
+                f"Columnas disponibles: {self.df_actividades.columns.tolist()}"
+            )
+
         return self.df_actividades
 
