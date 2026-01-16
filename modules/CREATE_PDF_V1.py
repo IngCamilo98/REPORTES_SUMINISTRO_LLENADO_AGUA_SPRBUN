@@ -177,13 +177,6 @@ class PDFHeaderFooter(FPDF):
         """
 
         # ------------------------------------------------
-        # 1. Asegurar tipo de fecha
-        # ------------------------------------------------
-        if isinstance(fecha_dia, str):
-            from datetime import datetime
-            fecha_dia = datetime.strptime(fecha_dia, "%Y-%m-%d").date()
-
-        # ------------------------------------------------
         # 2. Nueva página (si aplica) y posición inicial
         # ------------------------------------------------
         if nueva_pagina:
@@ -207,7 +200,9 @@ class PDFHeaderFooter(FPDF):
             nombre_mes = meses_es[fecha_dia.month - 1]
 
             # Ej: "DÍA - Lunes 27 de octubre de 2025"
-            titulo_dia = f"DÍA {num_dia} - {nombre_dia} {fecha_dia.day} de {nombre_mes} de {anio}"
+            #titulo_dia = f"DÍA {num_dia} - {nombre_dia} {fecha_dia.day} de {nombre_mes} de {anio}"
+            titulo_dia = f"DÍA {num_dia} - {nombre_dia} {fecha_dia.day} de {nombre_mes} de {fecha_dia.year}"
+
 
         self.cell(0, 8, titulo_dia, ln=True, align="L")
 

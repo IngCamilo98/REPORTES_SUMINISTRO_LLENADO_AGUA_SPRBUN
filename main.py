@@ -21,8 +21,9 @@ mes = menu.mes
 
 nombre_mes = AdminFechas.MESES_NUM_A_NOMBRE[mes]
 nombre_mes_anterior = menu.nombre_mes_anterior()
-fechas_mes = menu.rango_fechas_25a25()
 
+fechas_mes = menu.rango_fechas_25a25()
+print(fechas_mes)
 #print("Rango de fechas (27 a 26):", fechas[0].date(), "→", fechas[-1].date())
 #print("Total de días en el rango:", len(fechas))
 
