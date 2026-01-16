@@ -77,16 +77,13 @@ class GENERATE_GENERAL_RESUME:
         m = self.metricas
 
         texto = f"""
-Durante el periodo analizado se registraron un total de **{m['total_actividades']} actividades de mantenimiento** ejecutadas en las instalaciones de la **Sociedad Portuaria Regional de Buenaventura – Zonas Concesionadas y Externas**. Estas intervenciones se llevaron a cabo en **{m['total_zonas']} zonas operativas**, entre las cuales destacan **{m['zonas_principales']}**, por su mayor volumen de requerimientos.
+        Durante el periodo analizado se registraron un total de **{m['total_actividades']} actividades de suministro y llenado de agua** ejecutadas en las instalaciones de la **Sociedad Portuaria Regional de Buenaventura – Zonas Concesionadas y Externas**. Estas actividades se desarrollaron en **{m['total_zonas']} zonas operativas**, entre las cuales se destacan **{m['zonas_principales']}**, debido a su mayor demanda de abastecimiento y continuidad del servicio.
 
-El análisis del consolidado evidencia que las actividades se concentraron en dos líneas principales de trabajo:
-- **Actividades hidrosanitarias:** {m['actividades_hidrosanitarias']} intervenciones.
-- **Actividades en cubiertas:** {m['actividades_cubiertas']} intervenciones.
+Las acciones ejecutadas permitieron garantizar el abastecimiento oportuno de los tanques de almacenamiento, asegurando la disponibilidad continua de agua para el funcionamiento adecuado de los servicios sanitarios y el mantenimiento de condiciones óptimas de salubridad e higiene en las zonas intervenidas. La ejecución controlada de estas actividades contribuyó a la continuidad operativa de las instalaciones, evitando afectaciones asociadas a la falta de suministro y asegurando el correcto funcionamiento de los sistemas sanitarios durante el periodo reportado.
 
-Las acciones ejecutadas permitieron {m['resultado_general']}, garantizando la continuidad operativa y la funcionalidad de las áreas intervenidas.
+El valor económico consolidado del periodo asciende a **${m['valor_global']:,.0f}**, correspondiente a la ejecución total de las actividades de suministro y llenado de agua realizadas durante el periodo reportado.
 
-El valor económico consolidado del periodo asciende a **${m['valor_global']:,.0f}**, correspondiente a la ejecución total de las actividades registradas.
+Este resumen refleja el cumplimiento integral del servicio de asistencia para el suministro y llenado de agua, contribuyendo a la operatividad, salubridad y funcionamiento continuo de las zonas concesionadas y externas de la SPRBUN.
+        """
 
-Este resumen refleja el cumplimiento integral de las labores de mantenimiento necesarias para asegurar la operatividad y las condiciones adecuadas de infraestructura en las zonas concesionadas y externas de la SPRBUN.
-"""
         return texto.strip()

@@ -80,7 +80,6 @@ resumen_general = GENERATE_GENERAL_RESUME(df_informe_actividades)
 texto = resumen_general.generate_text()
 
 
-
 #---------------------------creemos el docuemtno pdf---------------------------#
 pdf = PDFHeaderFooter()
 pdf.agregar_portada(anio, nombre_mes, nombre_mes_anterior, fechas_mes, texto)  #  se dibuja solo en la primera página

@@ -119,14 +119,14 @@ class PDFHeaderFooter(FPDF):
 
         # Título centrado
         self.set_font("Helvetica", "B", 14)
-        self.cell(0, 10, "INFORME GENERAL DE ACTIVIDADES EJECUTADAS", ln=True, align="C")
+        self.cell(0, 10, "INFORME GENERAL DE ACTIVIDADES DE LLENADO Y SUMINISTRO DE AGUA", ln=True, align="C")
 
         # Espacio
         self.ln(2)
 
         # Información principal del encabezado
         encabezado = (
-            "Servicio: MANTENIMIENTO PERMANENTE DE CUBIERTAS Y REDES SANITARIAS\n"
+            "Servicio: ASISTENCIA PARA LLENADO Y SUMINISTRO DE AGUA\n"
             "Lugar de ejecución: SOCIEDAD PORTUARIA REGIONAL DE BUENAVENTURA - ZONAS CONCESIONADAS Y EXTERNAS\n"
             "Contratista: ALFA MONTAJES Y CUBIERTAS S.A.S.\n"
             f"Periodo reportado: Del {fechas_mes[0].day} de {nombre_mes_anterior} "
